@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Иерархия прав</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<aside class="accord">
+	<h1>Office</h1>
+	<div>
+
+		<h2>Сис. Админ</h2>
+		<div>
+			<h3>Администрирование</h3>
+			<div>			
+				<h4>B_EC	View and change configuration of outlet </h4>
+				<p>Availability of the Store Settings window (Administration menu item).
+
+					Ability to add storages and edit their settings.</p>
+	
+				<h4>B_ERS	Edit floor plans</h4>
+				<p>Ability to configure floor plans (Administration > Floor Plans).</p>	
+	
+				<h4>B_EAS	Accounting settings (from Administration)</h4>
+				<p>Ability to set up accounting of an outlet in the Administration > Accounting Settings section.</p>		
+	
+				<h4>B_CCLP	Close period</h4>
+				<p>Ability to specify locking date and period closing date in the store settings on the Accounting Settings tab (in the Final Locking Date and Preliminary Locking Date fields of the Period Closing block).
+
+					No documents with posting dates earlier than the Final Locking Date can be created or reposted.
+					
+					Preliminary Locking Date is used for setting the period in which only a user with the B_WCP permission will be able to create or repost documents.</p>
+			</div>
+		</div>
+		<h2>Бухгалтер</h2>
+		<div>
+			<h3>Retail Sales</h3>
+			<div>
+				<h4>B_ACS	Accept till shifts</h4>
+				<p>Ability to post till shift acceptance (Retail Sales > Till Shifts, Actions button – Accept shift).</p>			
+				
+				<h4>B_ACO	View till shifts</h4>
+				<p>Availability of the Retail Sales  > Till Shifts item.</p>
+				
+				<h4>B_APIO	View types of deposits/withdrawals</h4>
+				<p>Availability of the Retail Sales > Deposit/Withdrawal Types item.</p>
+
+				<h4>B_APT	View payment types</h4>
+				<p>Availability of the Retail Sales > Payment Types item.</p>
+
+				<h4>B_VDR	View deletion reasons</h4>
+				<p>Availability of the Retail Sales > Reasons for deletion menu item.</p>
+
+				<h4>B_VTJ	View event log</h4>
+				<p>Availability of the Retail Sales > Event Log menu item.</p>
+
+				<h4>B_SCH	Handle service fee</h4>
+				<p>Availability of the Retail Sales > Service Fee menu item</p>
+
+				<h4></h4>
+				<p></p>
+				
+				<h4></h4>
+				<p></p>
+			</div>
+			<h3>Контрагенты</h3>
+			<div>					
+				<h4>B_CTR Work with contractors	</h4>
+				<p> Ability to register and configure parameters for relationships with suppliers and guests (availability of Contractors menu item).</p>
+								
+				<h4>B_GUEST Work with guest reference book</h4>
+				<p>In iikoOffice: Ability to add new customers and edit their details, availability of the Guests items in the Contractors section.
+
+					In iikoFront: Availability of the Guest List item and guests in the Discounts/Surcharges window, ability to add new guests.</p>
+								
+				<h4>B_SUPP 	Work with supplier data</h4>
+				<p>Availability of the Contractors > Suppliers menu item.
+
+					Having the "Work with goods and storages" (B_STO) permission granted the Inventory Management/Contractors > Suppliers and Supplier Balance menu items will be available.</p>
+								
+				<h4>B_CHL Change price lists</h4>
+				<p>Ability to edit a supplier's price list (Inventory Management/Contractors > Suppliers > Price List button).
+				</p>
+								
+				<h4>B_UCA Access to Availability in contractor's file</h4>
+				<p>Ability to open and edit the Availability tab in the contractor's file.</p>
+								
+				<h4>B_UCADI Access to ID/License in contractor's file</h4>
+				<p>Ability to open and edit the Additional Information tab in the contractor's file.</p>
+								
+				<h4>B_UCDOC  Access to ID/License in contractor's file</h4>
+				<p>Ability to open and edit the ID/License tab in the contractor's file</p>
+								
+				<h4>B_UCLE  Access to Legal Entity in contractor's file</h4>
+				<p>Ability to open the Legal Entity tab in the contractor's file.
+				</p>
+								
+				<h4>B_UCM Access to Basic Information in contractor's file</h4>
+				<p>Ability to open and edit the Basic Information tab in the contractor's file.
+					Required to be able to add new contractors.</p>
+								
+				<h4>B_UCMB  Access to Health Records & Tests in contractor's file</h4>  
+				<p>Ability to open and edit the Health Records & Tests tab in the contractor's file.</p>
+								
+				<h4>B_UCPC  Access to Price Control in contractor's file</h4>
+				<p>Ability to open and edit the Price Control tab in the contractor's file.</p>
+								
+				<h4>B_UCPH  Access to Photo in contractor's file</h4>
+				<p>Ability to open and edit the Photo tab in the contractor's file.</p>
+			</div>
+			<h3>Прейскурант</h3>
+			<div>				
+				<h4>B_QMENU View quick menu</h4>
+				<p>Availability of the Price List > Quick Menu item.</p>
+								
+				<h4>B_ROMENOR МEdit price lists</h4>
+				<p>Availability of all Price list items (price update, Price list for goods and services, Quick menu). Ability to create price updates, view price list, and edit quick menu</p>
+								
+				<h4>B_MENOR View price lists </h4>
+				<p>Ability to view a price list (Price List > Price lists for products and services).</p>
+								
+				<h4>B_PMENOR Post price updates</h4>
+				<p>Ability to submit a price list (Price List > Price lists for products and services). By default, it is provided to everyone who has the B_ROMENOR (Edit price lists) permission.</p>
+			</div>
+
+		</div>
+		<h2>HR</h2>
+		<div>			
+			<h3>Сотрудники</h3>
+			<div>
+				<h4>B_BAP  Remunerate and fine employees using Accruals and Deductions logs</h4>
+				<p>Ability to give a bonus and fine staffers using the Accruals and Deductions logs. The B_PER, B_VE, and B_CVEJ permissions are required.</p>
+								
+				<h4>B_EE Edit and delete personal files, edit contractors</h4>
+				<p>Ability to edit (except for the Position field) and remove personal files (Employees > List of Employees). B_PER and B_VE permissions are required.
+					Ability to edit suppliers' and guests' files (Contractors > Suppliers/Guests).</p>
+								
+				<h4>B_EAP 	Edit pay rates, schedule, and attendances in closed period </h4>
+				<p>Ability to create and edit schedules and attendances of employees even in the closed period.</p>
+								
+				<h4>B_EEP Edit employee financial data</h4>
+				<p>Ability to obtain personal reports and view current settlements from an employee list (Employees > Personal Report and Current Settlements in shortcut menu).</p>
+								
+				<h4>B_EP Edit permissions</h4>
+				<p>Ability to register new employees, configure their permissions, edit iikoOffice passwords, and edit the Position field in personal files. B_PER, B_VE, and B_EE permissions are required.</p>
+								
+				<h4>B_MED  Handle health records and tests</h4>
+				<p>Ability to receive consolidated details using the Health Records & Tests report. It is recommended to be exercised together with the B_UCMB permission. B_PER and B_VE permissions are required.</p>
+								
+				<h4>B_PER Access to Employees section </h4>
+				<p>Availability of the Employees menu section, as well as respective databases, logs, and reports.</p>
+								
+				<h4>B_REP View employee financial data</h4>
+				<p>Ability to retrieve personal reports on employees (Employees > Reports > Personal report and Consolidated wages report, Reports > Contractors) and view information on the payment in the employee’s personal card.</p>
+								
+				<h4>B_SCHED  Plan shifts and schedules</h4>
+				<p>Ability to view and manage the Assigning shifts to employees, Scheduling, and Staff planning sections, as well as the Schedule log. The B_PER, B_VE, and B_CVEJ permissions are required (as a prerequisite condition</p>
+								
+				<h4>B_TIME Register attendance</h4>
+				<p>Ability to register employees' clock-in and clock-out times in the attendance log, as well as print or export the timesheet to Excel. The B_PER, B_VE, and B_CVEJ permissions are required.</p>
+								
+				<h4>B_VE View employees and their files</h4>
+				<p>Availability of the Employees > List of employees menu item. Availability of the employees' files (also from reports and logs).
+					Doesn't allow adding, removing, or editing personal files. Requires B_PER permission.</p>
+								
+				<h4>B_VP View permissions</h4>
+				<p>Availability of the Permission menu item in the Employees and Administration menu sections.</p>
+								
+				<h4>B_CVR View employee roles</h4>
+				<p>Ability to view a list of registered positions and create new ones (Employees > Positions).</p>
+								
+				<h4>B_CVST View shift types</h4>
+				<p>Ability to view a list of registered shift types and edit them (Employees > Shift Types).</p>
+								
+				<h4>B_CVAT View attendance types</h4>
+				<p>Ability to view a list of registered attendance types and edit them (Employees > Types of attendance).</p>
+								
+				<h4>B_CVPT View penalty types</h4>
+				<p>Ability to view a list of registered penalty types and edit them (Employees > Types of deductions).</p>
+								
+				<h4>B_CVBT View bonus types</h4>
+				<p>Ability to view the list of registered bonus types and edit them (Employees > Types of accruals).</p>
+								
+				<h4>B_CVEJ View Employees > Logs</h4>
+				<p>Availability of Employees > Logs menu item.</p>
+								
+				<h4>B_EPP Create and edit payroll registers</h4>
+				<p>Ability to create and edit payroll registers (Employees (Reports) > Payroll Registers).</p>
+								
+				<h4>B_PAY Register accruals and payments to employees</h4>
+				<p>Availability of the Charge, Issue advance payment, Issue cash, Payout, Deduct items in the Payroll Register, Consolidated Report, Personal Report.
+					Ability to give and deduct employees' bonuses using Accruals and Deductions logs.</p>
+								
+				<h4>B_VPP View payroll registers</h4>
+				<p>Ability to view payroll records (Employees (Reports) > Payroll Records).</p>
+
+			</div>
+		</div>
+		<h2>Финансист</h2>
+		<div>			
+			<h3>Финансы</h3>
+			<div>
+				<h4>B_FIN Work with finances</h4>
+				<p>Ability to handle financial module (Finances menu item).</p>
+								
+				<h4>B_VCOA View chart of accounts</h4>
+				<p>Ability to view a list of accounts (Finances > Chart of Accounts).</p>
+								
+				<h4>B_ECOA Edit chart of accounts</h4>
+				<p>Ability to change accounts (Finances > Chart of Accounts). User must have the B_VCOA permission.</p>
+								
+				<h4>B_MCB Open account</h4>
+				<p>Ability to open a particular account and view its transactions (Finances > Chart of Accounts and Open account).</p>
+								
+				<h4>B_ECB Create and edit manual account transactions</h4>
+				<p>Ability to post transactions in accounts from the Chart of Accounts (Finances > Chart of Accounts).</p>
+								
+				<h4>B_ECFA Edit CF items</h4>
+				<p>Ability to edit CF items (Finances > CF Items).</p>
+								
+				<h4>B_VCFR View cash flow report</h4>
+				<p>Ability to view Cash Flow Statement (Finances > Cash Flow Statement).</p>
+								
+				<h4>B_ESRV Ability to create and edit services</h4>
+				<p>Ability to create and edit services in the Finances > Services reference book.</p>
+								
+				<h4>B_SRVC Create, edit and save service acceptance and provision records without posting</h4>
+				<p>Ability to create, edit and save documents without posting in the Finances > Service Acceptance Record and Service Provision Record sections.</p>
+								
+				<h4>B_SRVR Post service acceptance and provision records</h4>
+				<p>Ability to post documents in the Finances > Service Acceptance Record and Service Provision Record sections.</p>
+								
+				<h4>B_SRVV View service acceptance and provision records</h4>
+				<p>Ability to view documents in the Finances > Service Acceptance Record and Service Provision Record records.</p>
+								
+				<h4>B_VPLR View profit and loss report</h4>
+				<p>Ability to view the Profit and Loss Report (Finances > Profit and Loss Report).</p>
+								
+				<h4>B_VBALR View balance sheet</h4>
+				<p>Ability to view Balance Sheet (Finances > Balance Report).</p>
+								
+				<h4>B_VOTR View OLAP transactions report</h4>
+				<p>Ability to view OLAP Transactions Report (Finances > OLAP Transactions Report).</p>
+								
+				<h4>B_BUD_VIEW View Plan/Actual analysis</h4>
+				<p>Ability to view Plan/Actual analysis (Finances > Plan/Actual)</p>
+								
+				<h4>B_BUD_EDIT Can edit unclosed plan actuals</h4>
+				<p>Ability to edit not submitted Plan/Actual analysis (Finances > Plan/Actual)</p>
+								
+				<h4>B_BUD_SEDIT Can change Plan Actual's status</h4>
+				<p>Ability to create and submit Plan/Actual analysis, edit published Plan/Actuals (Finances > Plan/Actual)</p>
+								
+				<h4>B_BKI Load account transactions</h4>
+				<p>Ability to download bank statement data (availability of the Finances > Import of account statement item)</p>
+								
+				<h4>B_VBALR 	View balance sheet</h4>
+				<p>Ability to view balance sheet (availability of the Finances > Balance Report item).</p>
+								
+				<h4>B_ESI Create/edit receipts</h4>
+				<p>Ability to create receipts: availability of the Generate button in the receipt order menu.
+
+					Ability to edit, delete, and pay receipts on the Receipts tab of the Budgeting section.</p>
+								
+				<h4>B_ESP Create/edit payments</h4>
+				<p>Ability to create payments: availability of the Generate button in the payment order menu.
+
+					Ability to edit, delete, and effect payments on the Payments tab of the Budgeting section.</p>
+								
+				<h4>B_ESPR Create/edit payment schedule orders.</h4>
+				<p>Ability to create, edit, and delete payment or receipt orders.</p>
+								
+				<h4>B_VSI View the list of receipts</h4>
+				<p>Availability of the Receipts tab in the Finances > Budgeting window.</p>
+								
+				<h4>B_VSP View payment list</h4>
+				<p>Availability of the Payments tab in the Finances > Budgeting window.</p>
+								
+				<h4>B_VSP View payment schedule </h4>
+				<p>Availability of the Finances > Payment Schedule item.</p>
+								
+				<h4>B_VSPR View the list of payment schedule orders </h4>
+				<p>Availability of the Payment orders tab in the Finances > Budgeting window.</p>
+								
+				<h4>B_BKE Export payment orders</h4>
+				<p>Availability of the Finances > Export to Online Banking Software item and the Create Payment Orders button in the Debt to Suppliers window.</p>
+			</div>
+		</div>
+		<h2>Офисный Оператор</h2>
+		<div>
+			<h3>Inventory Management</h3>
+			<div>
+				
+				<h4>B_STO	Operations with products and storages</h4>
+				<p>Ability to work with a stocklist reference book and inventory documents (Inventory Management).</p>
+				
+				<h4>B_IPLV	View internal price list</h4>
+				<p>Ability to view the internal price list (Inventory Management > Internal Price List).</p>
+
+			</div>
+			<h3>References</h3>
+			<div>					
+				<h4>B_VN	View stock list reference books</h4>
+				<p>Ability to view the list of goods, items, prepared components, modifiers, measurement units, accounting categories and manufacturers (Inventory Management > Reference Books).</p>
+				
+				<h4>B_EN	Edit stock list reference books</h4>
+				<p>Ability to edit stock list items (Inventory Management > Reference Books). Possession of permission B_VN is a required condition.</p>
+
+			</div>
+			<h3>Documents</h3>
+			<div>							
+				<h4>B_WCP	Work with documents in locked period</h4>
+				<p>Ability to create and repost documents and edit detailed recipes earlier than the Preliminary Locking Date (Accounting Settings tab in Period Closing).</p>
+				
+				<h4>B_CEDT	Edit document time</h4>
+				<p>Ability to set document posting time. If you do not have this permission you will only be able to set its date when creating the document. The document will be posted under the time set in the store settings in the Accounting Settings tab.</p>
+								
+				<h4>B_CEDN	Edit document numbers</h4>
+				<p>Ability to set document number.</p>
+								
+				<h4>B_EBDD	Edit documents post factum</h4>
+				<p>Ability to create and repost inventory documents post factum.</p>
+								
+				<h4>B_CAD	View all stock list types in documents</h4>
+				<p>Availability of the All tab in inventory documents.</p>
+								
+				<h4>B_INB	Post credit received products to negative stock balance</h4>
+				<p>Ability to post receipt transactions for negative balances.</p>
+				
+				<h4>B_WNB	Post expenditure creating negative balance</h4>
+				<p>Ability to post transactions in storage as a result of which a negative balance will be registered for goods in the storage.</p>
+			</div>
+			<h3>Internal Transfer</h3>
+			<div>
+				<h4>B_INTINVV	View internal movements</h4>
+				<p>Ability to view the list of internal transfer documents (Inventory Management > Internal Transfers).</p>				
+							
+				<h4>B_INTINVC	Create and edit internal movements</h4>
+				<p>Ability to create and edit internal transfer documents and save them without posting (Inventory Management > Internal Transfers).</p>
+								
+				<h4>B_INTINVR	Post internal movements</h4>
+				<p>Ability to save and post internal transfer documents (Inventory Management > Internal Transfers).</p>
+				
+				<h4>B_CRMULTII	Allow creation of internal transfers from storages of different departments</h4>
+				<p>Ability to create and edit documents on internal transfers that take place among different subdivisions of a corporation (Inventory Management > Internal Transfers).</p>
+								
+				<h4>B_INTE	Edit posted internal transfers</h4>
+				<p>Ability to edit registered internal transfer documents and save and repost them (Inventory Management > Internal Transfers).</p>
+			</div>
+			<h3>Invoices</h3>
+			<div>
+				<h4>B_INVV	View invoices</h4>
+				<p>Ability to view a list of invoices (Inventory Management > Invoices).</p>				
+											
+				<h4>B_INVC	Create and edit invoices</h4>
+				<p>Ability to create and edit invoices and save them without posting (Inventory Management > Invoices).</p>
+				
+				<h4>B_INVR	Post invoices</h4>
+				<p>Ability to save and post invoices (Inventory Management > Invoices).</p>
+												
+				<h4>B_INVP	Pay invoices</h4>
+				<p>Ability to register and receive invoice payments (availability of the Debt to contractors and Receiving payments items)</p>
+				
+				<h4>B_TID	Post invoices deviating from price list, if this is forbidden</h4>
+				<p>Ability to save and post invoices (Inventory Management > Invoices) containing goods at inadmissible prices regardless of the settings specified in supplier's price lists.</p>
+			</div>
+			<h3>Cooking Records</h3>
+			<div>
+				<h4>B_PRODNV	View cooking records</h4>
+				<p>Ability to view a list of cooking records (Inventory Management > Cooking Records).</p>				
+											
+				<h4>B_PRODNC	Create and edit cooking records</h4>
+				<p>Ability to create and edit cooking records and save them without posting (Inventory Management > Cooking Records).</p>
+				
+				<h4>B_PRODNR	Post cooking records</h4>
+				<p>Ability to save and post cooking records (Inventory Management > Cooking Records).</p>
+			</div>
+			<h3>Sales Records</h3>
+			<div>
+				<h4>B_SALEV	View sales records</h4>
+				<p>Ability to view a list of sales records (Inventory Management > Sales records).</p>				
+											
+				<h4>B_SALEC	Create and edit sales records</h4>
+				<p>Ability to create and edit sales records and save them without posting (Inventory Management > Sales records).</p>
+				
+				<h4>B_SALER	Post sales records</h4>
+				<p>Ability to save and post sales records (Inventory Management > Sales rcords).</p>
+			</div>
+			<h3>Substitution Records</h3>
+			<div>
+				<h4>B_TRANSV	View substitution records</h4>
+				<p>Ability to view a list of substitution records (Inventory Management > Substitution Records).</p>				
+											
+				<h4>B_TRANSC	Create and edit substitution records</h4>
+				<p>Ability to create and edit substitution records and save them without posting (Inventory Management > Substitution Records).</p>
+				
+				<h4>B_TRANSR	Post substitution records</h4>
+				<p>Ability to save and post substitution records (Inventory Management > Substitution Records).</p>
+			</div>
+			<h3>Write-off Records</h3>
+			<div>
+				<h4>B_WOFFV	View write-off records</h4>
+				<p>Ability to view a list of write-off records (Inventory Management > Write-off Records).</p>				
+											
+				<h4>B_WOFFC	Create and edit write-off records</h4>
+				<p>Ability to create and edit write-off records and save them without posting (Inventory Management > Write-off Records).</p>
+
+				<h4>B_WOFFR	Post write-off records</h4>
+				<p>Ability to save and post write-off records (Inventory Management > Write-off Records).</p>
+					
+				<h4>B_WOFFE	Edit posted write-off records</h4>
+				<p>Ability to edit posted write-off records and save and repost them (Inventory Management > Write-off records).</p>			
+			</div>
+			<h3>Apportion Records</h3>
+			<div>					
+				<h4>B_DASMV	View apportion records</h4>
+				<p>Ability to view a list of apportion records (Inventory Management > Apportion Records).</p>
+				
+				<h4>B_DASMC	Create and edit apportion records</h4>
+				<p>Ability to create and edit apportion records and save them without posting (Inventory Management > Apportion Records).</p>
+				
+				<h4>B_DASMR	Post apportion records</h4>
+				<p>Ability to save and post apportion records (Inventory Management > Apportion Records).</p>
+				
+				<h4></h4>
+				<p></p>
+			</div>
+			<h3>Inventory Reconciliation</h3>
+			<div>					
+				
+				<h4>B_VI	View inventory reconciliation</h4>
+				<p>Ability to view a list of inventory reconciliations (Inventory Management > Inventory Reconciliations).</p>
+								
+				<h4>B_CI	Create and edit inventory reconciliation</h4>
+				<p>Ability to create and edit inventory reconciliation documents and save them without posting (Inventory Management > Inventory Reconciliations).</p>
+								
+				<h4>B_PI	Post inventory reconciliation</h4>
+				<p>Ability to save and post inventory reconciliation documents (Inventory Management > Inventory Reconciliations).</p>
+
+				<h4>B_FIBR	Fill in book balance in inventory reconciliation record</h4>
+				<p>Availability of the Fill in book balance button in the Step 2 window of inventory reconciliation (Inventory Management > Inventory Reconciliations).</p>
+			</div>
+			<h3>Return Invoices</h3>
+			<div>					
+				
+				<h4>B_RINVV	View return invoices</h4>
+				<p>Ability to view a list of return invoices (Inventory Management > Return Invoices).</p>
+								
+				<h4>B_RINVC	 Create and edit return invoices</h4>
+				<p>Ability to create and edit return invoices and save them without posting (Inventory Management > Return Invoices).</p>
+								
+				<h4>B_RINVR	Post return invoices</h4>
+				<p>Ability to save and post return invoices (Inventory Management > Return Invoices).</p>
+
+			</div>
+		</div>
+		<h2>Технолог</h2>
+		<div>
+			<h3>Технологические карты</h3>
+			<div>
+				<h4>B_EAC	Change recipes (including creation, editing and deletion)</h4>
+				<p>Ability to edit data (create new version) on the Recipe tab of a stock list item.</p>				
+			</div>
+		</div>
+		<h2>Я только посмотреть отчёты</h2>
+		<div>			
+			<h3>Отчеты</h3>
+			<div>				
+				<h4>B_RPT View reports</h4>
+				<p>Ability to view reports in the Reports menu.</p>
+								
+				<h4>B_VSR View inventory reports</h4>
+				<p>The menu items Inventory Management (Reports) > Storage Balance, Detailed Turnover Balance Sheet, Inventory Movement, Sales Report for period, Inventory Report, Certificates, Ingredient Cross Reference Report are all available if vested with the B_STO – Work with goods and storages permission. As well as the ability to create and edit storages.
+
+					Ability to view storage balance in the stock list reference books (Items, Modifiers, Stock List) as well as in the Inventory Movement report and invoices.
+					
+					With the "B_RPT – Reports view" permission the aforementioned reports are available in Reports (Storages).</p>
+								
+				<h4>B_CASR View sales reports</h4>
+				<p>	
+					Availability of reports: Sales Report For Period, Banquets and Reservations Report, OLAP Sales Report, Average Spend Report.
+					
+					These reports are also available in Reports (Sales) with the permission "B_RPT – View reports" in the Retail Sales (Reports) section if having the "B_SALE – Work with retail sales permission.</p>
+								
+				<h4>B_ESOR Edit shared OLAP reports</h4>
+				<p>Ability to create, edit and save shared OLAP reports</p>
+								
+				<h4>B_VREPORT View custom reports</h4>
+				<p>Availability of the Customizable reports item in the Reports (if granted B_RPT and B_VSR) and Inventory Management (if granted B_VSR) sections.</p>
+								
+				<h4>B_EREPORT 	Edit custom reports</h4>
+				<p>Availability of the Create, Edit, Delete, Copy commands in the Customizable reports item (and Save view in the user reports). Has no sense without the «B_VREPORT – View custom reports» permission</p>
+								
+				<h4>B_PREPORT See purchasing reports</h4>
+				<p>Availability of the Sales report and Report on purchasing discrepancies.</p>
+			</div>
+		</div>
+	</div>
+	<h1>Front</h1>
+	<div>
+		<h2>Управляющий рестораном</h2>
+		<div>
+			<h3>Отчёты во фронте за прошедший период</h3>
+			<div></div>
+			<h3>Оплата заказа за счёт заведения</h3>
+			<div></div>
+		</div>			
+		<h2>Менеджер ресторана</h2>
+		<div>
+			<h3>Отчёты во фронте</h3>
+			<div></div>
+			<h3>Опасные операции по заказам</h3>
+			<div></div>
+			<h3>Банкеты и резервы</h3>
+			<div></div>
+			<h3>Действия с переносом, объединением или разделением заказа</h3>
+			<div></div>
+			<h3>Подтверждать операци вводом ПИН-кода</h3>
+			<div></div>
+			<h3>Изменять официанта заказа</h3>
+			<div></div>
+			<h3>Применять скидку и надбавку</h3>
+			<div></div>
+		</div>
+		<h2>Кассир</h2>
+		<div>
+			<h3>Внесения и изъятия</h3>
+			<div></div>
+			<h3>Работа с кассовой сменой</h3>
+			<div>
+				<h4>F_ACO	Автоматически закрывать заказы в кредит при закрытии смены	</h4>
+				<p>Возможность закрывать открытые заказы со списанием за счет обслуживающих их сотрудников на первом шаге мастера закрытия смены.</p>
+				<h4>F_AOT	Создавать и редактировать заказы других официантов	</h4>
+				<p>Возможность регистрировать новые и просматривать существующие заказы, оформленные на других сотрудников.</p>
+				<h4>F_AEC	Авторизовывать аварийную отмену операций	</h4>
+				<p>Доступность пункта Аварийные операции → Ручной сброс блокировок.</p>
+				<h4>F_APA	Подтверждать начисление бонусных баллов	</h4>
+				<p>Возможность подтверждать начисление бонусных баллов на карты бонусно-депозитных систем.</p>
+				<h4>F_APIO	Авторизовывать кассовые внесения и изъятия	</h4>
+				<p>Возможность подтверждать прокаткой карты операции внесения или изъятия.</p>
+				<h4>F_CA	Закрывать приложение	</h4>
+				<p>Доступность кнопки Выйти в Windows в дополнительном меню.</p>
+				<h4>F_CASH	Принимать платежи	</h4>
+				<p>Возможность работать на кассе: принимать оплату заказов, внесение наличных, изъятие наличных, проводить контрольный пересчет (раздел Касса).</p>
+				<h4>F_CCB	Авторизовывать опасные операции, связанные с отменой пречека</h4>
+				<p> 	Возможность подтверждать отмену пречека и другие операции, с этим связанные:
+				Добавление скидок.
+				Привязка гостя к заказу.
+				Объединение заказов.
+				Перенос блюд.
+				Удаление заказа.</p>
+				<h4>F_CHO	Открывать заказы в качестве официанта	</h4>
+				<p>Возможность обслуживать столы. Заказ может быть зарегистрирован только на одного из сотрудников, обладающих данным правом.</p>
+				<h4>F_CGC	Изменять количество гостей	</h4>
+				<p>Возможность задавать число гостей и редактировать его в сторону уменьшения или увеличения</p>
+				<h4>F_CLOR	Просматривать закрытые заказы	</h4>
+				<p>Доступность списка заказов, по которым был распечатан чек за текущую смену (Касса → Закрытые заказы).</p>
+				<h4>F_CLOS Просматривать суммы в закрытых заказах</h4>
+				<p>Возможность видеть суммы оплаты закрытых заказов, в том числе с доставкой.</p>
+				<h4>F_CMP	Сменять номер стола с отпечатанными блюдами	</h4>
+				<p>Возможность подтверждать перенос заказа с отпечатанными блюдами на другой стол.</p>
+				<h4>F_COC	Авторизовывать закрытие столов в кредит	</h4>
+				<p>Возможность подтверждать оплату заказов в кредит.</p>
+				<h4>F_CPOTB	Распечатывать пречек на заказы других официантов	</h4>
+				<p>Возможность печатать пречек на заказы других официантов.</p>
+				<h4>F_CWC	Подтверждать оплату в кредит без прокатки карты контрагента	</h4>
+				<p>Возможность подтверждать оплату заказов в кредит на контрагента, у которого в карточке не установлена галочка Нельзя проводить операции по счету без прокатывания карточки контрагента.</p>
+				<h4>F_COTH	Закрывать столы за счет заведения	</h4>
+				<p>Возможность подтверждать оплату заказов за счет заведения.</p>
+				<h4>F_COW	Авторизовывать перенос заказа другому официанту	</h4>
+				<p>Возможность подтверждать перенос открытого заказа на другого сотрудника.</p>
+				<h4>F_CPBA	Распечатывать пречек повторно	</h4>
+				<p>Возможность подтверждать повторную печать пречека.</p>
+				<h4>F_CS	Закрывать кассовую смену	</h4>
+				<p>Возможность проводить закрытие кассовой смены. При этом на определенных шагах данной операции все равно будет требоваться подтверждение прокаткой карты менеджера.</p>
+				<h4>F_CST	Выключать терминал	</h4>
+				<p>Возможность инициировать выключение рабочего компьютера непосредственно из системы (Дополнительное меню → Выключить терминал)</p>
+				<h4>F_CSUO	Переносить любые столы на следующую кассовую смену	</h4>
+				<p>Возможность проводить закрытие кассовой смены, если на этот момент есть открытые заказы.</p>
+				<h4>F_CSUUO	Переносить заказы без пречека на следующую кассовую смену	</h4>
+				<p>Возможность проводить закрытие кассовой смены при наличии открытых заказов.</p>
+				<h4>F_CVS	Редактировать расписание сотрудников	</h4>
+				<p>Раздел Дополнительное меню → Редактировать явки.</p>
+				<h4>F_CWAUS Подтверждать работу в должности вне расписания</h4>
+				<p>Возможность открывать личную смену, если ее нет в расписании. Используется, когда включена настройка Строгое соответствие расписанию (Настройки торгового предприятия → Учет рабочего времени).</p>
+				<h4>F_DCO Удалять закрытые заказы	</h4>
+				<p>Возможность удалять закрытые заказы, в том числе заказы на доставку.</p>
+				<h4>F_DNPI	Удалять неотпечатанные строки	</h4>
+				<p>Возможность удалять добавленные в заказ блюда, которые еще не были распечатаны на кухню.</p>
+				<h4>F_DOP	Авторизовывать опасные операции вводом ПИН-кода	</h4>
+				<p>Возможность набирать пин-код вместо прокатки карт.
+				При этом файл конфигурации
+				\Application Data\iiko\CashServer\config.xml
+				должен содержать строку: <AllowHandCardRoll>true</AllowHandCardRoll>
+				</p>
+				<h4>F_DP	Удалять отпечатанные блюда из заказа до печати пречека	</h4>
+				<p>Возможность подтверждать удаление блюд из заказа, который уже был распечатан на кухню.</p>
+				<h4>F_DR	Открывать денежный ящик	Раздел Касса → Открытие денежного ящика. </h4>
+				<p>Возможность выполнять денежные операции, не закрывая денежный ящик (если в настойках ФР установлена галочка Запретить работать с кассой при открытом денежном ящике).</p>
+				<h4>F_EBC	Настраивать штрихкоды фасовок	</h4>
+				<p>Дополнительно → Настройка и печать штрихкодов. Печать штрихкодов фасовок штучных товаров, взвешиваниe весовых товаров и печать этикеток штрихкодов.
+				</p>
+				<h4>F_ECL	Игнорировать лимит суммы чека	</h4>
+				<p>Возможность оплачивать заказы с недопустимыми суммами (если в настройках торгового предприятия заданы минимальная и максимальная суммы чека).</p>
+				<h4>F_EFA	Разрешать вводить дробное количество товара	</h4>
+				<p>Возможность вводить дробное количество блюда при продаже. Доступность дробных значений и знака «,» в окне ввода количества блюда.</p>
+				<h4>F_EKDS Редактировать настройки кухонного экрана</h4>
+				<p>Возможность управлять настройками кухонного экрана ( → Сервис → Кухонный экран → Настройки). По умолчанию предоставляется новым сотрудникам с должностями ADM (Системный администратор), CO1 (Повар), MN0 (Управляющий), MN1 (Менеджер). Для новых сотрудников с другими должностями это право настраивается вручную.</p>
+				<h4>F_EM	Редактировать стоп-лист и «быстрое меню»	</h4>
+				<p>Раздел Дополнительное меню → Стоп-лист. А также возможность подтверждать внесение в заказ блюд, находящихся в стоп-листе (если в настройках торгового предприятия установлен параметр Не пробивать блюда из стоп-листа).</p>
+				<h4>F_ERS	Редактировать резервы и банкеты	</h4>
+				<p>Возможность регистрировать и редактировать резервы столов.</p>
+				<h4>F_FRC Работать с командами фискального регистратора</h4>
+				<p>Возможность работать с командами фискального регистратора. По умолчанию предоставляется всем сотрудникам с правом F_XR.</p>
+				<h4>F_HS Настраивать оборудование</h4>
+				<p>Доступна кнопка Инструменты → Настройка оборудования и можно добавлять или удалять устройства, менять их настройки. </p>
+				<h4>F_ID	Устанавливать надбавку и скидку для заказа	</h4>
+				<p>Возможность подтверждать надбавку или скидку по заказу.</p>
+				<h4>F_IDCN	Устанавливать надбавку и скидку по карте гостя без прокатки карты	</h4>
+				<p>Возможность проводить скидку или надбавку без прокатки карты по ее номеру.</p>
+				<h4>F_IDGC	Устанавливать надбавку и скидку для заказа по гостевой карте	</h4>
+				<p>Возможность подтверждать надбавку или скидку для заказа по карте гостя.</p>
+				<h4>F_KDS Просматривать кухонный экран</h4>
+				<p>Возможность видеть кухонный экран ( → Сервис → Кухонный экран). По умолчанию предоставляется новым сотрудникам с должностями ADM (Системный администратор), CO1 (Повар), MN0 (Управляющий), MN1 (Менеджер). Для новых сотрудников с другими должностями это право настраивается вручную.
+				</p>
+				<h4>F_KIS	Принудительно закрывать личные смены	</h4>
+				<p>Дополнительно меню → Редактировать явки → Закрыть открытые явки.</p>
+				<h4>F_MPR	Объединять столы с отпечатанными блюдами	</h4>
+				<p>Возможность подтверждать объединение заказов, которые уже были отправлены на кухню.</p>
+				<h4>F_OCS	Открывать кассовую смену	</h4>
+				<p>Возможность подтверждать открытие кассовой смены.</p>
+				<h4>F_OMO	Открывать несколько заказов на один стол	</h4>
+				<p>Возможность подтверждать регистрацию нового заказа на стол, на котором уже есть открытый заказ.</p>
+				<h4>F_OPIN	Подтверждать открытие персональной смены по ПИН-коду	</h4>
+				<p>Возможность подтверждать открытие и закрытие личной смены сотрудника, если он авторизовался в системе вводом PIN-кода, а не прокаткой карты.</p>
+				<h4>F_EOWCC	Редактировать заказы без карты клиента	</h4>
+				<p>При использовании режима обслуживания «Карта на входе» совместно с iikoCard возможность работать с заказом клиента, не прокатывая его карту.</p>
+				<h4>F_IPS	Продавать блюда без учета расписания прейскуранта	</h4>
+				<p>Возможность продавать блюда, которые запрещены к продаже по прейскуранту, действующему на данный момент.</p>
+				<h4>F_PA	Повторно печатать блюда	</h4>
+				<p>Возможность подтверждать повторную печать блюд в заказе.</p>
+				<h4>F_PAW	Принимать оплату в качестве официанта	</h4>
+				<p>Возможность принимать дистанционную оплату при расчете официанту</p>
+				<h4>F_POB	Начислять штрафы и премии	</h4>
+				<p>Возможность подтверждать начисление штрафов и премий.</p>
+				<h4>F_PRPRE	Проводить предоплату	</h4>
+				<p>В возможность проводить предоплату: в окне расчета доступна кнопка Предоплата.</p>
+				<h4>F_REP	Авторизовывать удаление предоплаты	</h4>
+				<p>Возможность подтверждать удаление внесенной предоплаты.</p>
+				<h4>F_REREP	Просматривать расширенный отчет реестра счетов	</h4>
+				<p>Возможность просматривать отчеты «046 Реестр счетов» и «051 Расширенный реестр счетов» в iikoFront.</p>
+				<h4>F_RUOFF	Запускать iikoOffice из iikoFront	</h4>
+				<p>Возможность из интерфейса Front запускать iikoOffice (раздел Дополнительное меню → Система).</p>
+				<h4>F_SC	Выдавать подменные карты	</h4>
+				<p>Возможность выдавать сотруднику временную карту, которую он будет использовать для работы в системе вместо своей карты: в разделе Дополнительное меню → Подменная карта.</p>
+				<h4>F_SET	Редактировать настройки рабочей станции	</h4>
+				<p>Возможность переопределять тип терминала: стационарный или мобильный (Дополнительное меню → Настройка терминала).</p>
+				<h4>F_STRN	Производить возврат по чеку	</h4>
+				<p>Возможность подтверждать возврат чека (Дополнительное меню → Касса → Закрытые заказы → Частичный возврат чека).</p>
+				<h4>F_SWWOFF Производить возврат оплаты по чеку без возврата на склад</h4>
+				<p>Возможность выполнить возврат денег по чеку без приходования товара обратно на склад.</p>
+				<h4>F_SWA	Видеть оборот других официантов в экране столов	</h4>
+				<p>Отображение суммы продаж других сотрудников в режимах «Все столы» и «По официантам». По умолчанию данное право есть только у официантов.</p>
+				<h4>F_SWD	Видеть задолженности всех официантов	</h4>
+				<p>Возможность просматривать задолженность всех официантов. При отсутствии права F_SWD и при наличии права F_VPSD возможность видеть только свою задолженность.</p>
+				<h4>F_VOS	Видеть открытые личные смены	</h4>
+				<p>Просмотр списка сотрудников, у которых на текущий момент открыты личные смены (раздел Дополнительное меню → Редактировать явки).</p>
+				<h4>F_VPSD	Видеть свою заработную плату на личной странице	</h4>
+				<p>Возможность просматривать выручку и зарплату на рабочем экране и на личной странице сотрудника в iikoFront.</p>
+				<h4>F_VRPT	Просматривать отчеты во фронте	</h4>
+				<p>Возможность просматривать отчеты во Front: в разделе Дополнительное меню доступна кнопка Отчеты.</p>
+				<h4>F_VRRP	Просматривать отчеты по резервам	</h4>
+				<p>iikoOffice: Отчеты → Отчет по банкетам и резервам.</p>
+				<h4>F_VRS	Просматривать резервы и банкеты	</h4>
+				<p>Возможность просматривать список заказов на резервы столов.</p>
+				<h4>F_XR	Печатать Х-отчет	</h4>
+				<p>Возможность подтверждать операцию контрольного пересчета и просматривать Х-отчет.</p>
+				<h4>F_ZREP	Просматривать полный отчет	</h4>
+				<p>Кассовые операции → Полный отчет.</p>
+				<h4>PS_ADM	Проводить административные операции с платежными системами	</h4>
+				<p>Возможность подтверждать операцию оплаты заказа картой Плас-Тек. Доступ к меню Плас-Тек и Пульсар.</p>
+				<h4>F_CSE	Аварийно закрывать кассовую смену	</h4>
+				<p>Возможность закрывать кассовую смену, минуя стандартную процедуру, например, при поломке фискального регистратора: в разделе Дополнительное меню → Система доступна кнопка Аварийные операции.
+			</div>
+			<h3>Оплата заказа</h3>
+			<div></div>
+			<h3>Принимать предоплату</h3>
+			<div></div>
+			<h3>Оплата заказа в кредит</h3>
+			<div></div>
+			<h3>Открывать денежный ящик</h3>
+			<div></div>
+		</div>
+		<h2>Старший официант</h2>
+		<div>
+			<h3>Повторная печать заказов</h3>
+			<div></div>
+			<h3>Редактировать заказы других официантов</h3>
+			<div></div>
+			<h3>Работа со стоп-листом</h3>
+			<div></div>
+		</div>
+		<h2>Официант</h2>	
+		<div>
+			<h3>Дробное количество блюд</h3>
+			<div></div>
+			<h3>Указывать количество гостей</h3>
+			<div></div>
+			<h3>Принять заказ</h3>
+			<div></div>
+		</div>
+		<h2>Работник кухни или бара</h2>	
+		<div>			
+			<h3>Изменять статус блюда на кухонном экране</h3>
+			<div></div>
+			<h3>Кухонный экран</h3>
+			<div></div>
+		</div>
+	</div>
+</aside>
+<script src="./jquery.min.js"></script>
+<script  src="./script.js"></script>
+</body>
+</html>
